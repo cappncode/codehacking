@@ -25,7 +25,7 @@ class UsersEditRequest extends Request
     {
         return [
             'name'      => 'required',
-            'email'     => 'required|email',
+            'email'     => 'required|email|unique:users,email,'.$this->route('users'),
             'role_id'   => 'required',
             'is_active' => 'required',
         ];

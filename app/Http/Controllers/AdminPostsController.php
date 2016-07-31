@@ -22,7 +22,7 @@ class AdminPostsController extends Controller
      */
     public function index()
     {
-        Carbon::setLocale('nl');
+//        Carbon::setLocale('nl');
         $posts = Post::all();
         
         return view('admin.posts.index', compact('posts'));

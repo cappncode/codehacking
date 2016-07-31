@@ -49,7 +49,7 @@
             @foreach($posts as $post)
                 <tr>
                     <td>{{$post->id}}</td>
-                    <td><img height="50" class="img-rounded" src="{{$post->photo ? $post->photo->file : '/images/placeholder_user.png'}}" alt=""></td>
+                    <td><img height="50" class="img-rounded" src="{{$post->photo ? $post->photo->file : '/images/placeholder_post.jpg'}}" alt=""></td>
                     <td><a href="{{route('admin.posts.edit', $post->id)}}">{{$post->title}}</a></td>
                     <td>{{$post->category ? $post->category->name : 'No Category'}}</td>
                     <td>{{str_limit($post->body, $limit = 20, $end = ' ...')}}</td>
